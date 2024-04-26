@@ -10,7 +10,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/TheRe
 ## Initiating Our UI
 
 ```lua
-local main = Library:Init {name = "YOUR UI NAME"}
+local main = Library:Init{name = "YOUR UI NAME"}
 ```
 
 ## Creating A Tab
