@@ -72,8 +72,8 @@ local Dropdown = YourTabName:Dropdown({
 		-- Your Code Here
 	end,
 })
-drop:Add("THING #1", 1)
-drop:Add("THING #2", 2)
+Dropdown:Add("THING #1", 1)
+Dropdown:Add("THING #2", 2)
 ```
 
 
