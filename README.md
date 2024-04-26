@@ -43,9 +43,10 @@ local Button =
 
 
 ## Creating A Slider
-(I forgot how this shit works. This UI Library isn't for public use anyways.)
+
 ```lua
-local Slider = YourTabName:Slider()
+local Slider = YourTabName:Slider({title = "YOUR TITLE" })
+-- You can also set a value by doing Slider:SetValue() and get the value by doing Slider:GetValue()
 ```
 
 
