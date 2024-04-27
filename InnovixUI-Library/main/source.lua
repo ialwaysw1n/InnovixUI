@@ -146,6 +146,17 @@ function Library:Init(options)
 		GUI["b"]["ImageRectOffset"] = Vector2.new(690, 752);
 		GUI["b"]["Name"] = [[ExitButton]];
 		GUI["b"]["Position"] = UDim2.new(1, -4, 0, 4);
+		
+		local function onExitButtonInput(input)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 then
+				if GUI["2"] then
+					GUI["2"]:Destroy()
+				end
+			end
+		end
+
+		GUI["b"].InputBegan:Connect(onExitButtonInput)
+		
 
 		-- StarterGui.Innovix.MainFrame.TopBar.Line
 		GUI["c"] = Instance.new("Frame", GUI["6"]);
@@ -1245,3 +1256,5 @@ function Library:Init(options)
 	
 	return GUI
 end
+
+local main = Library:Init()
