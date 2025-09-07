@@ -527,7 +527,7 @@ function Library:Init(options)
 						Button.MouseDown = true
 						Library:tween(Button["1d"], {BackgroundColor3 = Color3.fromRGB(88, 88, 88)})
 						Library:tween(Button["1f"], {Color = Color3.fromRGB(200, 200, 200)})
-						options:callback()
+						options.callback()
 					end
 				end)
 				
@@ -896,7 +896,7 @@ function Library:Init(options)
 					Slider["2f"].Text = tostring(v)
 					Slider["33"].Size = UDim2.fromScale(((v - options.min) / (options.max - options.min)), 1)
 				end
-				options.callback(Slider.GetValue())
+				options.callback(tonumber(Slider["2f"].Text))
 			end
 			
 			function Slider:GetValue(v)
@@ -1253,3 +1253,4 @@ function Library:Init(options)
 end
 
 return Library
+
