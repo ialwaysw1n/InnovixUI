@@ -1078,7 +1078,7 @@ function Library:Init(options)
 					end
 					
 					Dropdown.Items[id] = {
-						instance = itemInstance,
+						instance = {},
 						value = value
 					}
 					-- StarterDropdown.Innovix.MainFrame.ContentContainer.HomeTab.Dropdown.OptionHolder.InactiveOption
@@ -1253,4 +1253,5 @@ function Library:Init(options)
 end
 
 return Library
+
 
