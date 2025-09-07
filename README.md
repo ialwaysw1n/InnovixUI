@@ -1,63 +1,72 @@
-# Welcome to Innovix UI 
+# Welcome to Innovix UI (The worst UI I've ever released)
 
 ## Getting Your Loadstring:
 
 ```lua
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/TheRealInnovix/InnovixUI/main/InnovixUI-Library/main/source.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/ialwaysw1n/InnovixUI/main/InnovixUI-Library/main/source.lua"))()
 ```
 
 
 ## Initiating Our UI
 
 ```lua
-local main = Library:Init{name = "YOUR UI NAME"}
+local main = Library:Init({name = "YOUR UI NAME"})
 ```
 
 ## Creating A Tab
 
 ```lua
-local Tab = main:CreateTab({title = "YOUR TITLE"})
+local Tab = main:CreateTab({
+    title = "Home",
+    icon = "rbxassetid://16884179038"
+})
 ```
 
 
 ## Creating A Label / Section
 
 ```lua
-local Label = YourTabName:Label({message = "YOUR MESSAGE OR LABEL"})
+local Label = Tab:Label({
+    message = "This is a label"
+})
 ```
 
 
 ## Creating A Button
 
 ```lua
-local Button =
-	YourTabName:Button(
-		{
-			title = "YOUR TITLE",
-			callback = function()
-				-- Your Code Here
-			end
-		}
-	)
+local Button = Tab:Button({
+    title = "Button",
+    callback = function()
+        print("Button clicked")
+    end
+})
 ```
 
 
 ## Creating A Slider
 
 ```lua
-local Slider = YourTabName:Slider({title = "YOUR TITLE" })
--- You can also set a value by doing Slider:SetValue() and get the value by doing Slider:GetValue()
+local Slider = Tab:Slider({
+    title = "Slider",
+    min = 0,
+    max = 100,
+    default = 50,
+    callback = function(value)
+        print("slider set to:", value)
+    end
+})
 ```
 
 
 ## Creating A Toggle
 
 ```lua
-local Toggle = YourTabName:Toggle({
-	title = "YOUR TITLE",
-	callback = function()
-		-- Your Code Here
-	end,
+local Toggle = Tab:Toggle({
+    title = "Toggle",
+    callback = function(value)
+        print("Toggle state:", value)
+    end
 })
 ```
 
@@ -65,14 +74,17 @@ local Toggle = YourTabName:Toggle({
 ## Creating A Dropdown
 
 ```lua
-local Dropdown = YourTabName:Dropdown({
-	title = "YOUR TITLE",
-	callback = function()
-		-- Your Code Here
-	end,
+local Dropdown = Tab:Dropdown({
+    title = "Dropdown Options",
+    callback = function(value)
+        print("Selected:", value)
+    end,
+    items = {}
 })
-Dropdown:Add("THING #1", 1)
-Dropdown:Add("THING #2", 2)
+
+Dropdown:Add("Option 1", 1)
+Dropdown:Add("Option 2", 2)
+Dropdown:Add("Option 3", 3)
 ```
 
 
