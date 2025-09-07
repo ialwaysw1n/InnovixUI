@@ -4,8 +4,8 @@
 ██║████╗  ██║████╗  ██║██╔═══██╗██║   ██║██║╚██╗██╔╝
 ██║██╔██╗ ██║██╔██╗ ██║██║   ██║██║   ██║██║ ╚███╔╝ 
 ██║██║╚██╗██║██║╚██╗██║██║   ██║╚██╗ ██╔╝██║ ██╔██╗ 
-██║██║ ╚████║██║ ╚████║╚██████╔╝ ╚████╔╝ ██║██╔╝ ██╗   @ lua.u.
-╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝  ╚═╝   https://discord.gg/Gvh9TnSRpM
+██║██║ ╚████║██║ ╚████║╚██████╔╝ ╚████╔╝ ██║██╔╝ ██╗   
+╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝  ╚═╝	@ script.er
 
 ]=]
 
@@ -600,7 +600,6 @@ function Library:Init(options)
 				Label["27"]["TextWrapped"] = true;
 				Label["27"]["TextYAlignment"] = Enum.TextYAlignment.Top;
 
-				-- StarterLabel.Innovix.MainFrame.ContentContainer.HomeTab.Label.UIPadding
 				Label["28"] = Instance.new("UIPadding", Label["24"]);
 				Label["28"]["PaddingTop"] = UDim.new(0, 6);
 				Label["28"]["PaddingRight"] = UDim.new(0, 6);
@@ -642,7 +641,6 @@ function Library:Init(options)
 			
 			-- render
 			do
-				-- StarterToggle.Innovix.MainFrame.ContentContainer.HomeTab.ToggleInactive
 				Toggle["46"] = Instance.new("Frame", Tab["1c"]);
 				Toggle["46"]["BorderSizePixel"] = 0;
 				Toggle["46"]["BackgroundColor3"] = Color3.fromRGB(48, 48, 48);
@@ -650,16 +648,13 @@ function Library:Init(options)
 				Toggle["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 				Toggle["46"]["Name"] = [[ToggleInactive]];
 
-				-- StarterToggle.Innovix.MainFrame.ContentContainer.HomeTab.ToggleInactive.UICorner
 				Toggle["47"] = Instance.new("UICorner", Toggle["46"]);
 				Toggle["47"]["CornerRadius"] = UDim.new(0, 4);
 
-				-- StarterToggle.Innovix.MainFrame.ContentContainer.HomeTab.ToggleInactive.UIStroke
 				Toggle["48"] = Instance.new("UIStroke", Toggle["46"]);
 				Toggle["48"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
 				Toggle["48"]["Color"] = Color3.fromRGB(150, 150, 150);
-
-				-- StarterToggle.Innovix.MainFrame.ContentContainer.HomeTab.ToggleInactive.Title
+				
 				Toggle["49"] = Instance.new("TextLabel", Toggle["46"]);
 				Toggle["49"]["BorderSizePixel"] = 0;
 				Toggle["49"]["TextXAlignment"] = Enum.TextXAlignment.Left;
@@ -734,7 +729,7 @@ function Library:Init(options)
 						Library:tween(Toggle["4e"], {Visible = false})
 					end
 
-					options:callback(Toggle.State)
+					options.callback(Toggle.State)
 				end
 			end
 			
@@ -1083,7 +1078,7 @@ function Library:Init(options)
 					end
 					
 					Dropdown.Items[id] = {
-						instance = {},
+						instance = itemInstance,
 						value = value
 					}
 					-- StarterDropdown.Innovix.MainFrame.ContentContainer.HomeTab.Dropdown.OptionHolder.InactiveOption
@@ -1258,3 +1253,4 @@ function Library:Init(options)
 end
 
 local main = Library:Init()
+
